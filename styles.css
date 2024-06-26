@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6d6e74, #2a292b);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.text-areas {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.input-area,
+.output-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 48%;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s, box-shadow 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+textarea:focus {
+    border-color: #505053;
+    box-shadow: 0 0 8px rgba(127, 127, 129, 0.6);
+}
+
+textarea#outputText {
+    background-color: #e9ecef;
+    background-image: url('img/ojitos.jpg'); /* Reemplaza con la URL de tu imagen */
+}
+
+textarea#outputText.show-text {
+    background-image: none;
+}
+
+.options {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #222125;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #222125;
+    transform: translateY(-3px);
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+@media (max-width: 600px) {
+    .text-areas {
+        flex-direction: column;
+    }
+
+    .input-area,
+    .output-area {
+        width: 100%;
+    }
+}
